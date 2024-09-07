@@ -943,7 +943,7 @@ section,
   text-decoration: wavy;
   text-align: left;
   font-style: italic;
-  color: #cc1919;
+  color: rgb(26,118,209);
 }
 
 .hero .welcome p {
@@ -957,13 +957,13 @@ section,
 
 .hero .content .why-box {
   color: var(--contrast-color);
-  background: rgb(238, 64, 34);
+  background: rgb(26,118,209);
   padding: 30px;
   border-radius: 4px;
 }
 
 .hero .content .why-box h3 {
-  color: rgb(37, 37, 204);
+	color: #223080;
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
@@ -1009,11 +1009,31 @@ section,
   font-size: 20px;
   font-weight: 700;
   margin: 10px 0 20px 0;
+  display:inline-block;
+	text-transform:capitalize;
+	color:#301ca0;
+
 }
 
 .hero .content .icon-box p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+/*.hero .content .icon-box .time-sidual{
+
+}*/
+.hero .content .icon-box .time-sidual{
+  overflow:hidden;
+	margin-top:17px;
+}
+.hero .content .icon-box .time-sidual li {
+	display: block;
+	color: #223080;
+	width: 100%;
+	margin-bottom:3px;
+}
+.hero .content .icon-box .time-sidual li:last-child{
+  margin: 0;
 }
 
 /*--------------------------------------------------------------

@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:rgb(25,119,204);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.content-container {
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: white;
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusts automatically */
+    gap: 20px; /* Adds space between the grid items */
+
+}
+
+.services-links, .services-description {
+    width: 45%;  /* Desktop and tablet width */
+    margin-bottom: 20px;  /* Ensure spacing between sections */
+}
+
+.services-links h2, .services-description h2 {
+    text-align: center;
+    color: rgb(25,119,204);
+    animation: fade-in 2s ease-in;
+}
+
+.services-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-links li {
+    text-align: center;
+    margin: 15px 0;
+    animation: fade-in 2s ease;
+}
+
+.services-links img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Ensures consistent image size */
+    border-radius: 8px;
+}
+
+.services-links img:hover {
+    transform: scale(1.1);
+}
+
+.services-links a {
+    text-decoration: none;
+    color: rgb(25,119,204);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.services-links a:hover {
+    color: rgb(25,119,204);
+}
+
+.services-description .description {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-left: 5px solid rgb(25,119,204);
+    animation: fade-in 2s ease-in-out;
+}
+
+.services-description .description h3 {
+    margin-top: 0;
+    color:rgb(25,119,204);
+}
+/* Grid Layout for Inpatient Services */
+.patient-services {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: auto auto auto; /* 3 rows */
+    gap: 20px;
+}
+
+.service {
+    background-color: #f4f4f4;
+    border: 2px solid rgb(25,119,204);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: blue;
+}
+
+.service p {
+    font-size: 16px;
+    color: rgb(2, 2, 2);
+}
+/* Clinical Services CSS */
+.clinical-services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the image and description */
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 300px; /* Consistent image size */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Space between image and description */
+}
+
+.service-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align description content */
+}
+
+.service-description h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #007b5e;
+}
+
+.service-description p {
+    font-size: 16px;
+    color: #333;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    background-color: rgb(25,119,204);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* Sticky footer */
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Animation Keyframes */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .content-container {
+        flex-direction: column;  /* Stack sections vertically */
+        padding: 10px;
+    }
+
+    .services-links, .services-description {
+        width: 100%;  /* Take full width on mobile */
+    }
+
+    .service-item img {
+        max-width: 100%; /* Make images full width on small screens */
+    }
+
+    .services-links li {
+        margin: 10px 0;  /* Reduce margin on smaller screens */
+    }
+
+    .services-description .description {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .services-links img {
+        max-width: 70px;  /* Even smaller images on very small screens */
+    }
+
+    .services-links li {
+        margin: 8px 0;
+    }
+
+    .services-description .description {
+        padding: 6px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
